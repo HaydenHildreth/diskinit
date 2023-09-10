@@ -1,38 +1,27 @@
-/*                                                             /
-/*                            initDISK.c                       /
-/*                                                             /
-/*                      Copyright (c) 2001                     /
-/*                      tom ehlert                             /
-/*                      All Rights Reserved                    /
-/*                                                             /
-/* This file is part of DOS-C.                                 /
-/*                                                             /
-/* DOS-C is free software; you can redistribute it and/or      /
-/* modify it under the terms of the GNU General Public License /
-/* as published by the Free Software Foundation; either version/
-/* 2, or (at your option) any later version.                   /
-/*                                                             /
-/* DOS-C is distributed in the hope that it will be useful, but/
-/* WITHOUT ANY WARRANTY; without even the implied warranty of  /
-/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See   /
-/* the GNU General Public License for more details.            /
-/*                                                             /
-/* You should have received a copy of the GNU General Public   /
-/* License along with DOS-C; see the file COPYING.  If not,    /
-/* write to the Free Software Foundation, 675 Mass Ave,        /
-/* Cambridge, MA 02139, USA.                                   /
-/****************************************************************/
+initDISK.c                       
+                                                           
+Copyright (c) 2001                     
+tom ehlert                             
+All Rights Reserved                    
+                                                            
+This file is part of DOS-C.                                 
+                                                            
+DOS-C is free software; you can redistribute it and/or      
+modify it under the terms of the GNU General Public License 
+as published by the Free Software Foundation; either version
+2, or (at your option) any later version.                   
+                                                            
+DOS-C is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of  
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See   
+the GNU General Public License for more details.            
+                                                             
+You should have received a copy of the GNU General Public   
+License along with DOS-C; see the file COPYING.  If not,    
+write to the Free Software Foundation, 675 Mass Ave,        
+Cambridge, MA 02139, USA.                                   
 
-#include "portab.h"
-#include "debug.h"
-#include "init-mod.h"
-#include "dyndata.h"
-
-UBYTE InitDiskTransferBuffer[SEC_SIZE] BSS_INIT({0});
-COUNT nUnits BSS_INIT(0);
-
-/*
-   Rev 1.0   13 May 2001  tom ehlert
+Rev 1.0   13 May 2001  tom ehlert
 Initial revision.
 
 this module implements the disk scanning for DOS accesible partitions
